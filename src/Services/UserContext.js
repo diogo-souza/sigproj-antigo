@@ -250,7 +250,7 @@ export const UserStorage = ({ children }) => {
         titulo: '=)',
         userText: 'Seus dados foram atualizados com sucesso.',
       });
-      history.push(`${response.request.responseURL.slice(37)}`);
+      history.push(`${response.request.responseURL.slice(process.env.REACT_APP_API_URL.length)}`);
     } catch (error) {
       setErrorsHTTP({
         ...errorsHTTP,
@@ -284,7 +284,7 @@ export const UserStorage = ({ children }) => {
         titulo: '=)',
         userText: 'Seus dados foram atualizados com sucesso.',
       });
-      history.push(`${response.request.responseURL.slice(37)}`);
+      history.push(`${response.request.responseURL.slice(process.env.REACT_APP_API_URL.length)}`);
     } catch (error) {
       setErrorsHTTP({
         ...errorsHTTP,
