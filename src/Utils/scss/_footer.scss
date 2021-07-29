@@ -1,0 +1,30 @@
+.footer {
+  background-image: url('../assets/texture.png');
+  filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.55));
+  margin-bottom: 1px;
+  margin-top: 0;
+}
+.menu-footer {
+  max-width: 330px;
+  padding: 0 15px;
+  margin: 0;
+}
+
+.copyright {
+  text-align: center;
+  margin: 30px 5px;
+}
+.linha-footer {
+  margin: 30px -30px 20px -30px;
+  align-items: center;
+}
+li {
+  font-size: 12px;
+  list-style-type: none;
+  display: flex;
+  margin: 5px 0;
+  p {
+    padding-left: 5px;
+    margin: 0;
+  }
+}

@@ -1,0 +1,47 @@
+.consulta-opcao {
+  background: url('../assets/texture.png') no-repeat center;
+  background-size: cover;
+  padding: 100px 0;
+
+  .h1,
+  h1 {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .h1,
+  h1::after {
+    content: '';
+    display: block;
+    width: 400px;
+    margin: 4px auto;
+    border-bottom: 5px solid $primary-red;
+    border-radius: 5px;
+  }
+
+  .box-buttons {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .botoes {
+      margin: auto;
+    }
+
+    @include button;
+    .button {
+      padding: 8px 50px 8px 10px;
+      width: 300px;
+      margin: 15px auto;
+      font-size: 1rem !important;
+      text-align: center !important;
+
+      p {
+        font-size: 110%;
+        align-content: center;
+        margin: auto auto auto auto;
+        padding: 0;
+      }
+    }
+  }
+}

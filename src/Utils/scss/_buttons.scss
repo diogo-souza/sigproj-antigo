@@ -1,0 +1,248 @@
+@mixin button {
+  .button-gray {
+    background: linear-gradient(
+      90deg,
+      $gray 80%,
+      darken($gray, 20%) 80%
+    ) !important;
+    &::before {
+      background: linear-gradient(
+        90deg,
+        darken($gray, 5%) 80%,
+        darken($gray, 20%) 80%
+      ) !important;
+    }
+
+    &::after {
+      background: linear-gradient(
+        90deg,
+        darken($gray, 7%) 80%,
+        darken($gray, 30%) 80%
+      ) !important;
+    }
+    p {
+      color: white !important;
+    }
+    i {
+      color: white !important;
+      position: absolute;
+    }
+  }
+  .home-button,
+  .button {
+    display: block;
+    border: none !important;
+    background: linear-gradient(90deg, $light-red 80%, $primary-red 80%);
+    width: 300px;
+    margin: 15px auto;
+    font-size: 1.5em;
+    border-radius: 3px;
+    padding: 10px 60px 10px 0px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
+
+    //Transition doesn't work with linear-gradient, so this is a hack to do
+    //this transition effect
+    &::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border-radius: 3px;
+      background: linear-gradient(
+        90deg,
+        darken($light-red, 5%) 80%,
+        darken($primary-red, 5%) 80%
+      );
+      z-index: -1;
+      transition: opacity 0.1s linear;
+      opacity: 0;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border-radius: 3px;
+      background: linear-gradient(
+        90deg,
+        darken($light-red, 7%) 80%,
+        darken($primary-red, 7%) 80%
+      );
+      z-index: -1;
+      transition: opacity 0.1s linear;
+      opacity: 0;
+    }
+
+    &:hover::before {
+      opacity: 1;
+    }
+    &:active::after {
+      opacity: 1;
+    }
+
+    &:focus {
+      border: none;
+      outline: none;
+    }
+
+    p {
+      display: inline-block;
+      color: white;
+      font-weight: 600;
+      font-size: 0.7em;
+      margin: 8px auto;
+    }
+    i {
+      color: white;
+      position: absolute;
+      right: calc((20% - 24px) / 2);
+      top: calc((100% - 24px) / 2);
+    }
+  }
+
+  .button {
+    padding: 8px 50px 8px 10px !important;
+    width: 300px;
+    font-size: 1rem !important;
+    text-align: center !important;
+
+    p {
+      font-size: 110%;
+      align-content: center;
+      padding: 0;
+    }
+  }
+
+  .button-medium {
+    width: 200px;
+    p {
+      margin: 0 0 0 0px !important;
+    }
+  }
+
+  .button-small {
+    width: 150px;
+    p {
+      margin: 0 0 0 0px !important;
+    }
+  }
+
+  .btn:focus {
+    outline: none !important;
+    outline-offset: none !important;
+    box-shadow: none !important;
+  }
+  .btn:active {
+    outline: none !important;
+    outline-offset: none !important;
+    box-shadow: none !important;
+  }
+}
+
+@mixin return {
+  hr {
+    margin-bottom: 50px;
+  }
+  .return {
+    display: flex;
+    align-items: center;
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0);
+    &:hover {
+      cursor: pointer;
+    }
+    i {
+      color: $light-red;
+      &:hover {
+        color: $primary-red;
+      }
+    }
+    p {
+      color: $light-red;
+      display: inline-block;
+      font-size: 20px;
+      margin-bottom: 0;
+      margin-left: 5px;
+      font-weight: 600;
+      &:hover {
+        color: $primary-red;
+      }
+    }
+  }
+}
+
+@mixin return-button {
+  //Botão para voltar
+  #previous {
+    margin: 1em;
+    width: 200px;
+    padding: 0px 0px 0px 40px !important;
+    background: linear-gradient(90deg, $primary-green 20%, $light-green 20%);
+    &::before {
+      background: linear-gradient(
+        90deg,
+        darken($primary-green, 5%) 20%,
+        darken($light-green, 5%) 20%
+      );
+    }
+    &::after {
+      background: linear-gradient(
+        90deg,
+        darken($primary-green, 7%) 20%,
+        darken($light-green, 7%) 20%
+      );
+    }
+    i {
+      color: white;
+      position: absolute;
+      right: calc((180% - 24px) / 2);
+      top: calc((100% - 24px) / 2);
+    }
+    @media (max-width: $md) {
+      margin: 1em auto;
+    }
+  }
+}
+
+@mixin next-button {
+  #next {
+    margin: 1em;
+    width: 200px;
+    padding: 0px 40px 0px 0px;
+    background: linear-gradient(90deg, $light-red 80%, $primary-red 80%);
+    &::before {
+      background: linear-gradient(
+        90deg,
+        darken($light-red, 5%) 80%,
+        darken($primary-red, 5%) 80%
+      );
+    }
+    &::after {
+      background: linear-gradient(
+        90deg,
+        darken($light-red, 7%) 80%,
+        darken($primary-red, 7%) 80%
+      );
+    }
+    @media (max-width: $md) {
+      margin: 1em auto;
+    }
+  }
+}
+
+@mixin button-nostyle {
+  .button-nostyle,
+  .button-nostyle:hover,
+  .button-nostyle:focus,
+  .button-nostyle:active {
+    background-color: rgba(255, 255, 255, 0) !important;
+    border: none !important;
+    outline: none !important;
+  }
+}

@@ -1,0 +1,209 @@
+.testaccount {
+  width: 100% !important;
+  margin: 0 !important;
+}
+.content-wrapper {
+  background: url('../assets/texture.png') no-repeat center !important;
+  background-size: cover !important;
+}
+
+@mixin tables {
+  .hrTable {
+    margin: 5px 0px;
+  }
+}
+
+@mixin box {
+  .box {
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 1.5em;
+    border-radius: 10px;
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1),
+      2px 2px 2px 1px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@mixin titulos-boxes {
+  .titulo {
+    background: #fbf9f9;
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    h1 {
+      font-size: 1.7rem !important;
+      font-weight: bold !important;
+    }
+  }
+}
+
+@mixin forms {
+  .box-all {
+    width: 100%;
+    padding: 2.5% 2.5%;
+  }
+  .boxForm {
+    border-style: solid;
+    border-radius: 10px;
+    border-color: $light-red;
+    padding: 30px;
+    margin: 30px;
+  }
+}
+
+@mixin home-basic-section {
+  h1 {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 600 !important;
+    color: $text-color;
+  }
+
+  .hr-1 {
+    height: 3px;
+    background-color: $primary-red;
+    width: 800px;
+    border-radius: 5px;
+  }
+
+  .section-divider {
+    height: 10px;
+    background-color: $primary-red;
+    transform: translateY(calc(100px + 1rem + 5px));
+  }
+
+  .description {
+    font-size: 1.5em;
+    width: 60%;
+    margin: 30px auto;
+    color: $text-color;
+  }
+
+  .button {
+    margin: 15px auto 0 auto;
+  }
+
+  @media (min-width: $md) and (max-width: $lg) {
+    .hr-1 {
+      width: 600px;
+    }
+  }
+  @media (max-width: $md) {
+    padding: 50px 0;
+    h1 {
+      font-size: 2em;
+    }
+
+    .hr-1 {
+      width: 400px;
+    }
+
+    .description {
+      font-size: 1.125em;
+    }
+
+    .section-divider {
+      transform: translateY(calc(50px + 1rem + 5px));
+    }
+
+    .button {
+      padding: 5px 60px 5px 0;
+    }
+  }
+
+  @media (max-width: $sm) {
+    .button {
+      width: 80%;
+    }
+    hr:nth-child(2) {
+      width: 80%;
+    }
+  }
+}
+
+@mixin dashboard-table {
+  thead {
+    background-color: $light-red;
+  }
+
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.25);
+  tr {
+    color: $text-color;
+    font-size: 0.9em;
+    th {
+      color: white;
+    }
+  }
+}
+
+@mixin table {
+  .table {
+    border-radius: 0.25em;
+    @include dashboard-table;
+
+    tr:active {
+      background-color: lighten($gray, 10%);
+      transition: ease-in-out 0.2s;
+    }
+    td {
+      p {
+        margin: 8px 0;
+      }
+    }
+    input {
+      margin: 0 auto;
+    }
+    .button {
+      background: linear-gradient(90deg, $light-red 75%, $primary-red 75%);
+      width: 150px;
+      margin: 0;
+      padding: 0 30px 0 0;
+      i {
+        right: calc((25% - 24px) / 2);
+        top: calc((100% - 24px) / 2);
+      }
+      p {
+        display: inline-block;
+        color: white;
+        font-weight: 600;
+        margin: 8px auto;
+      }
+      &::before {
+        background: linear-gradient(
+          90deg,
+          darken($light-red, 5%) 75%,
+          darken($primary-red, 5%) 75%
+        );
+      }
+      &::after {
+        background: linear-gradient(
+          90deg,
+          darken($light-red, 7%) 75%,
+          darken($primary-red, 7%) 75%
+        );
+      }
+    }
+  }
+}
+
+@mixin vr {
+  .vr {
+    height: 100%;
+    border: 1px $gray;
+  }
+}
+
+.form-label {
+  display: flex;
+  i {
+    margin-left: 10px;
+  }
+  h5 {
+    display: flex;
+  }
+}
+
+@include button;
+@include return;
+@include return-button;
+@include next-button;
+@include button-nostyle;

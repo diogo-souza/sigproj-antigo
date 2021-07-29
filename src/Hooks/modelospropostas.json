@@ -1,0 +1,153 @@
+// EVENTO
+{
+    "id": 1,
+    "uuid": "5fcef38f-d9ab-4c8b-aaf3-c3d5ce6c6485",
+    "modalidade": "Evento",
+    "edital_resumo": {
+        "uuid": "4bdc6223-655b-11eb-ae93-0242ac130002",
+        "titulo": "Edital 11"
+    },
+    "evento": {
+        "id": 1,
+        "projeto": null,
+        "objetivo_evento_projeto": null,
+        "conteudo_programatico": null,
+        "objetivos_especificos": null,
+        "cronograma": {
+            "inicio_planejamento": null,
+            "fim_planejamento": null,
+            "horas_semanais_planejamento": null,
+            "atividades_planejamento": null,
+            "inicio_avaliacao": null,
+            "fim_avaliacao": null,
+            "horas_semanais_avaliacao": null,
+            "atividades_avaliacao": null
+        },
+        "atividades": []
+    },
+    "estado": "Em preenchimento",
+    "area_tematica": "Cultura",
+    "titulo": "Projeto Revieww",
+    "subTitulo": null,
+    "objetivoGeral": null,
+    "periodo_inicio": null, // diferente
+    "periodo_fim": null, // diferente
+    "carga_horaria": null,
+    "local": null, // diferente
+    "doc_chefia_imediata": null,
+    "ch_coordenador": null,
+    "lotacao_coordenador": null,
+    "chefia_coordenador": null,
+    "setores_externos": [],
+    "publico_interno": {
+        "id": 1,
+        "docentes": 0,
+        "discentes_grad": 0,
+        "discentes_pos": 0,
+        "tecs_adm": 0,
+        "outros": 0
+    },
+    "publico_externo": {
+        "id": 1,
+        "servidores_federais": 0,
+        "discentes_federais": 0,
+        "servidores_estaduais": 0,
+        "discentes_estaduais": 0,
+        "servidores_municipais": 0,
+        "discentes_municipais": 0,
+        "organizacoes_privadas": 0,
+        "movimentos_sociais": 0,
+        "ongs": 0,
+        "organizacoes_sindicais": 0,
+        "grupos_comunitarios": 0,
+        "outros": 0
+    },
+    "info_proposta": {
+        "email": null,
+        "telefone": null,
+        "redes_sociais": null,
+        "consideracoes_finais": null
+    },
+    "diretrizes_proposta": {
+        "impacto_social": null,
+        "interacao_dialogica": null,
+        "impacto_estudante": null,
+        "interdisciplinaridade": null,
+        "indissociabilidade": null
+    },
+    "usuarios_proposta": [
+        {
+          "usuario": {
+              "uuid": "718a53e1-1e72-4017-9e98-0c8cb80ffa09",
+              "name": "Lucas Rodrigues dos Santos Valença",
+              "email": "tecnico@tecnico.com"
+          },
+            "funcao": "Proponente",
+            "carga_horaria": 0
+        }
+    ]
+}
+
+"{
+  "cronograma":{
+    "atividades_planejamento":[
+      {
+        "atividades":"Evento com titulo, subtitulo, objetivo geral, especifico, atividades e cronograma2",
+        "data_inicio":"2021-03-11",
+        "data_fim":"2021-03-11",
+        "hora_inicio":"16:20",
+        "hora_fim":"17:20"
+      }
+    ],
+    "atividades_avaliacao":[
+      {
+        "atividades":"Evento com titulo, subtitulo, objetivo geral, especifico, atividades e cronograma2",
+        "data_inicio":"2021-03-11",
+        "data_fim":"2021-03-11",
+        "hora_inicio":"16:20",
+        "hora_fim":"17:20"
+      }
+    ]
+  }
+}"
+
+"cronograma": {
+  "atividades_avaliacao": [
+    {
+      "atividades": "string",
+      "data_fim": "string",
+      "data_inicio": "string",
+      "horas_semanais": 0,
+      "id": 0
+    }
+  ],
+  "atividades_planejamento": [
+    {
+      "atividades": "string",
+      "data_fim": "string",
+      "data_inicio": "string",
+      "horas_semanais": 0,
+      "id": 0
+    }
+  ],
+
+  "{
+    "cronograma":{
+      "atividades_planejamento":[
+        {
+          "atividades":"Evento1.",
+          "data_inicio":"2021-03-12",
+          "data_fim":"2021-03-16",
+          "horas_semanais":"10:00"
+        }
+      ],"
+      atividades_avaliacao":[
+        {
+          "atividades":"Evento1.",
+          "data_inicio":"2021-03-12",
+          "data_fim":"2021-03-19",
+          "horas_semanais":"10:00"
+        }
+      ]
+    }
+  }"

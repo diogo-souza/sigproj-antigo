@@ -1,0 +1,196 @@
+@mixin login-button {
+  .login-button {
+    background: linear-gradient(90deg, $primary-red 70%, $secondary-red 70%);
+    border: none;
+    height: 100%;
+    font-size: 1.5em;
+    margin: 0;
+    margin-right: 5%;
+    padding: 0px 10px 0px 20px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+    &:hover {
+      transition: ease-in-out 0.2s;
+      background: linear-gradient(
+        90deg,
+        darken($primary-red, 5%) 70%,
+        darken($secondary-red, 5%) 70%
+      );
+    }
+    &:active {
+      transition: ease-in-out 0.2s;
+      background: linear-gradient(
+        90deg,
+        darken($primary-red, 7%) 70%,
+        darken($secondary-red, 7%) 70%
+      );
+    }
+
+    &:focus {
+      border: none;
+      outline: none;
+    }
+
+    p {
+      display: inline;
+      color: white;
+      font-weight: 400;
+      margin: 0.2em 0em;
+      font-size: 1em;
+      line-height: 2rem;
+      @media only screen and (max-width: $md) {
+        padding-right: 10px;
+      }
+      @media only screen and (max-width: $sm) {
+        padding-right: 5px;
+      }
+    }
+    .MuiSvgIcon-root {
+      margin-left: 15px;
+      color: white;
+      padding: 0;
+      @media only screen and (max-width: $md) {
+        margin-left: 0px;
+      }
+      @media only screen and (max-width: $sm) {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+.main-navbar {
+  @include login-button;
+  background-image: url('../assets/texture.png');
+  z-index: 3;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  height: $navbar-height;
+  margin: 0px;
+  padding: 0 !important;
+  // position: fixed !important;
+  width: 100%;
+
+  .container-fluid {
+    background-image: url('../assets/texture.png');
+    z-index: 3;
+    width: 100% !important;
+
+    .second-navbar {
+      width: 100%;
+      .navbar-brand {
+        font-size: 2em;
+        color: $primary-red;
+        margin: 0 auto;
+        @media only screen and (max-width: $xs) {
+          font-size: 1em;
+        }
+      }
+      .navbar-brand:hover {
+        color: $primary-red;
+      }
+
+      .btn {
+        color: transparent !important;
+        background-color: transparent !important;
+        border-color: #767675;
+        margin-right: 2%;
+      }
+    }
+  }
+  .navbar-toggler {
+    margin: 0;
+    margin-left: 5%;
+    order: 0 !important;
+  }
+
+  .login-button {
+    order: 1 !important;
+    @media only screen and (max-width: $lg) {
+      order: 0 !important;
+      margin-left: 0;
+    }
+    @media only screen and (max-width: $md) {
+      order: 0 !important;
+      padding-right: 5px;
+      padding-left: 15px;
+      font-size: 15px;
+      height: 32px;
+    }
+    @media only screen and (max-width: $sm) {
+      order: 0 !important;
+      padding-right: 1px;
+      padding-left: 15px;
+      font-size: 13.3333px;
+      height: 28px;
+    }
+    @media only screen and (max-width: $xs) {
+      order: 0 !important;
+    }
+  }
+}
+
+@media (max-width: $lg) {
+  .navbar-expand-lg .navbar-nav {
+    flex-direction: column;
+
+    .nav-item {
+      margin-top: 1%;
+      margin-left: 5%;
+    }
+  }
+}
+@media (max-width: $md) {
+  .login-button {
+    order: 0;
+  }
+  .navbar-expand-lg .navbar-nav {
+    flex-direction: column;
+
+    .nav-item {
+      margin-top: 1%;
+      margin-left: 5%;
+    }
+  }
+}
+@media (max-width: $sm) {
+  .navbar-expand-lg .navbar-nav {
+    flex-direction: column;
+    .nav-item {
+      margin-top: 1%;
+      margin-left: 5%;
+    }
+  }
+}
+
+@media (max-width: $xs) {
+  .navbar-expand-lg .navbar-nav {
+    flex-direction: column;
+    .nav-item {
+      margin-top: 1%;
+      margin-left: 5%;
+    }
+  }
+}
+
+.nav-offline{
+  .nav-item{
+    font-size: 20px;
+  }
+  margin-right: 3%;
+}
+
+.icon-texto {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: $primary-green;
+}
+
+.local {
+  font-size: 2em;
+  color: $primary-red;
+  margin: 0 auto;
+}

@@ -1,0 +1,8 @@
+{
+  "git.enabled": true,
+  "files.exclude": {
+    "node_modules": false,
+    ".gitignore": false,
+    "package-lock.json": false
+  }
+}

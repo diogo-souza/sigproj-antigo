@@ -1,0 +1,16 @@
+.contato {
+  background: url('../assets/texture.png') no-repeat center;
+  background-size: cover;
+  padding: 100px 0;
+
+  @include home-basic-section;
+
+  .form {
+    margin: 0 auto;
+    width: 60%;
+
+    .form-control {
+      background: rgba(255, 255, 255, 0.7);
+    }
+  }
+}

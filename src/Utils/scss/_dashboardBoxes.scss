@@ -1,0 +1,36 @@
+.dashboard-boxes {
+  padding: 50px 0;
+  .dashboard-boxes-row {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    .box-dashboard {
+      width: auto;
+      border-radius: 0.25em;
+      margin: 0 0.5em 1em 0.5em;
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.3);
+      .inner-content {
+        padding: 10px;
+        color: white;
+        h3 {
+          font-size: 2.5em;
+          font-weight: 800;
+        }
+        p {
+          margin-bottom: 0;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  .bg-red {
+    background-color: $light-red;
+  }
+  .bg-green {
+    background-color: $light-green;
+  }
+  .bg-gray {
+    background-color: $gray;
+  }
+}

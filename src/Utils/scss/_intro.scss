@@ -1,0 +1,67 @@
+.intro {
+  background: url('../assets/images/home-bg.png') no-repeat center;
+  background-size: cover;
+  padding: 150px 0;
+
+  h1 {
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    font-size: 4em;
+  }
+  h2 {
+    width: 80%;
+    text-align: center;
+    margin: 30px auto;
+    color: white;
+    font-weight: 500;
+  }
+  hr {
+    height: 10px;
+    background-color: $primary-red;
+    transform: translateY(calc(150px + 1rem + 5px));
+  }
+  hr:nth-child(2) {
+    width: 600px;
+    height: 3px;
+    background-color: $primary-red;
+    display: block;
+    border-radius: 3px;
+    transform: none;
+  }
+
+  .divider {
+    position: absolute;
+  }
+
+  @include button;
+
+  @media (max-width: $md) {
+    padding: 50px 0;
+    h1 {
+      font-size: 3em;
+    }
+    h2 {
+      width: 80%;
+      font-size: 1.125em;
+    }
+    hr {
+      transform: translateY(calc(50px + 1rem + 5px));
+    }
+    hr:nth-child(2) {
+      width: 400px;
+    }
+    .button {
+      padding: 5px 60px 5px 0;
+    }
+  }
+
+  @media (max-width: $sm) {
+    .button {
+      width: 80%;
+    }
+    hr:nth-child(2) {
+      width: 80%;
+    }
+  }
+}

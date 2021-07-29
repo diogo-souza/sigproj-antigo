@@ -1,0 +1,105 @@
+.consulta {
+  @include return;
+  margin: 80px 0;
+
+  hr {
+    margin-bottom: 1%;
+  }
+  .container {
+    .h3,
+    h3 {
+      font-size: 1.2rem;
+    }
+    hr {
+      color: $primary-red;
+      border-top: 2px solid;
+    }
+  }
+
+  .row-btn {
+    display: flex;
+    justify-content: flex-end;
+    .button {
+      width: auto;
+      max-height: 42px;
+      margin-right: 5px;
+      margin-left: 5px;
+    }
+  }
+
+  .pagination {
+    margin: auto;
+    width: fit-content;
+    .page-item,
+    .page-link {
+      color: $primary-green;
+
+      &.active .page-link {
+        background-color: $primary-green !important;
+        border-color: $secondary-green;
+      }
+    }
+  }
+}
+
+.cabecalho {
+  .h1,
+  h1 {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .h1,
+  h1::after {
+    content: '';
+    display: block;
+    width: 400px;
+    margin: 4px auto;
+    border-bottom: 5px solid $primary-red;
+    border-radius: 5px;
+  }
+}
+.header-resultado {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 30px;
+
+  .form-group {
+    margin: auto 0;
+  }
+  .button {
+    margin: auto 0;
+  }
+  .h1,
+  h1 {
+    margin: auto 0;
+  }
+}
+
+.membro {
+  width: 100px;
+  border: 1px solid $primary-green;
+  border-radius: 4px;
+  padding: 5px;
+  margin: 5px 10px;
+
+  .form-group {
+    .form-control {
+    }
+  }
+}
+
+.publico {
+  padding: 5px;
+  border: 1px solid $primary-green;
+  border-radius: 4px;
+
+  .form-group {
+    margin: 20px auto;
+
+    .form-control {
+      width: 70px;
+      margin-left: 4px;
+    }
+  }
+}

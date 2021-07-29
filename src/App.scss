@@ -1,0 +1,44 @@
+// Principais
+// @import '~bootstrap/dist/css/bootstrap.min.css';
+// @import "../node_modules/bootstrap/scss/bootstrap";
+@import '~compass-mixins/lib/compass';
+@import '~compass-mixins/lib/animate';
+@import '~bootstrap/scss/bootstrap.scss';
+@import './Utils/scss/variables.scss';
+@import './Utils/scss/responsive';
+@import './Utils/scss/colors';
+@import './Utils/scss/buttons';
+@import './Utils/scss/main';
+@import './Utils/scss/account';
+@import './Utils/scss/misc';
+
+@import './Utils/scss/contato';
+@import './Utils/scss/cadastro';
+
+@import './Utils/scss/consulta';
+@import './Utils/scss/cadastroProposta';
+@import './Utils/scss/caracterizacaoAcao';
+@import './Utils/scss/caracterizacaoProponente';
+
+@import './Utils/scss/consultas';
+@import './Utils/scss/contato';
+@import './Utils/scss/dashboard';
+@import './Utils/scss/dashboardPropostas';
+@import './Utils/scss/dashboardBoxes';
+@import './Utils/scss/documentosObrigatorios';
+@import './Utils/scss/footer';
+@import './Utils/scss/header';
+@import './Utils/scss/informacoesExtras';
+@import './Utils/scss/intro';
+@import './Utils/scss/login';
+@import './Utils/scss/membrosEquipes';
+@import './Utils/scss/publicoAlvo';
+@import './Utils/scss/selecionarEdital';
+@import './Utils/scss/selecionarModalidade';
+@import './Utils/scss/sidebar';
+@import './Utils/scss/sobre';
+@import './Utils/scss/register';
+@import './Utils/scss/about';
+@import './Utils/scss/scrollarrow';
+@import './Utils/scss/editor';
+@import './Utils/scss/consultaOpcao';

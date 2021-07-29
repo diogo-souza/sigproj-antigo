@@ -1,0 +1,51 @@
+.bm-burger-button {
+    position: 'absolute';
+    width: 26;
+    height: 20;
+    left: 30;
+    top: 40;
+    z-index: 19;
+}
+
+.bm-burger-bars {
+    background: 'rgba(122, 20, 39, 1)';
+}
+
+.bm-burger-bars-hover {
+    background: 'rgba(122, 20, 39, 1)';
+}
+
+.bm-cross-button {
+    display: 'none'
+}
+
+.bm-cross {
+    background: 'rgba(224, 199, 199, 0.2)';
+}
+
+.bm-menu-wrap {
+    position: 'fixed';
+    height: '100%';
+    width: 255;
+    z-index: 30;
+}
+
+.bm-menu {
+    background: 'rgba(247, 226, 226, 1)';
+}
+
+.bm-item {
+    outline: 'none';
+    &:focus {
+        outline: 'none';
+    }
+}
+
+.bm-morph-shape {
+    fill: 'rgba(247, 226, 226, 1)';
+}
+
+.bm-overlay {
+    background: 'rgba(0, 0, 0, 0.3)';
+    z-index: 20;
+}

@@ -1,0 +1,46 @@
+{
+  "env": {
+    "browser": true,
+    "es2020": true
+  },
+  "parser": "babel-eslint",
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb",
+    "prettier",
+    "prettier/react"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true,
+      "allowImportExportEverywhere": true
+    },
+    "ecmaVersion": 11,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "prettier"],
+  "rules": {
+    "jsx-a11y/label-has-associated-control": "off",
+    "react/prop-types": "off",
+    "import/prefer-default-export": "off",
+    "global-require": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "prettier/prettier": [
+      "off",
+      {
+        "endOfLine": "auto"
+      }
+    ],
+    "no-unused-expressions": "off",
+    "no-unused-vars": "off",
+    "consistent-return": "off",
+    "no-console": "warn",
+    "react/jsx-props-no-spreading": "off",
+    "prefer-const": "off",
+    "no-shadow": "off",
+    "no-plusplus": "off",
+    "radix": "off",
+    "react/destructuring-assignment": "off",
+    "camelcase": "off"
+  }
+}

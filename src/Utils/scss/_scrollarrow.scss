@@ -1,0 +1,16 @@
+.scrollTop {
+  color: white;
+  background-color: $primary-red;
+  position: sticky;
+  bottom: 20px;
+  z-index: 1000;
+  cursor: pointer;
+  animation: fadeIn 0.3s;
+  transition: opacity 0.4s;
+  opacity: 0.8;
+  border-radius: 100%;
+}
+
+.scrollTop:hover {
+  opacity: 1;
+}

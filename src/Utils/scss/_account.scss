@@ -1,0 +1,25 @@
+.nav-tabs {
+  a {
+    color: black !important;
+  }
+  .nav-link.active,
+  .nav-item.show .nav-link {
+    color: #fff !important;
+    background-color: $primary-red !important;
+  }
+  .nav-item,
+  .nav-link {
+    &#hover,
+    &.hover,
+    &:hover {
+      color: #fff !important;
+      background-color: $secondary-green;
+    }
+
+    &.disabled {
+      color: $nav-link-disabled-color !important;
+      background-color: transparent;
+      border-color: transparent;
+    }
+  }
+}

@@ -1,0 +1,97 @@
+@include box;
+.dashboard-propostas {
+  @include button;
+  padding: 50px 0;
+
+  .title {
+    display: flex;
+    h3 {
+      padding: 5px 0;
+      font-weight: 600;
+      color: $text-color;
+      margin-bottom: 0;
+    }
+  }
+  #filtro-dropdown,
+  #estado-dropdown,
+  #relacao-dropdown,
+  #modalidades-dropdown,
+  #titulo-prepend,
+  #departamento-prepend {
+    background-color: $light-green !important;
+    border: none;
+    color: white;
+  }
+
+  .button {
+    margin: 0 0 15px auto;
+    width: 15%;
+
+    background: linear-gradient(90deg, $light-green 75%, $primary-green 75%);
+    i {
+      right: calc((25% - 24px) / 2);
+      top: calc((100% - 24px) / 2);
+    }
+    &::before {
+      background: linear-gradient(
+        90deg,
+        darken($light-green, 5%) 75%,
+        darken($primary-green, 5%) 75%
+      );
+    }
+    &::after {
+      background: linear-gradient(
+        90deg,
+        darken($light-green, 7%) 75%,
+        darken($primary-green, 7%) 75%
+      );
+    }
+
+    @media (min-width: $md) and (max-width: $lg) {
+      width: 25%;
+      padding: 0 6% 0 0;
+    }
+    @media (min-width: $sm) and (max-width: $md) {
+      width: 40%;
+      padding: 0 8% 0 0;
+    }
+    @media (max-width: $sm) {
+      width: 50%;
+      padding: 0 10% 0 0;
+    }
+  }
+  .table-propostas {
+    border-radius: 0.25em;
+    @include dashboard-table;
+    thead {
+      background-color: $light-green;
+    }
+    tr:active {
+      background-color: lighten($gray, 10%);
+      transition: ease-in-out 0.2s;
+    }
+  }
+
+  .center {
+    display: flex;
+    justify-content: center;
+    span {
+      background-color: $light-green !important;
+      border: none;
+    }
+    a {
+      color: $light-green;
+    }
+  }
+  .buttons {
+    display: flex;
+    justify-content: flex-end;
+    .button {
+      padding: 0 3.5% 0 0 !important;
+      margin: 0 0 0 0;
+      // &:nth-child(1) {
+      //   margin: 0 15px 0 0;
+      // }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.consultas {
+  background: url('../assets/texture.png') no-repeat center;
+  background-size: cover;
+  padding: 100px 0;
+
+  @include button;
+  @include home-basic-section;
+
+  .button {
+    background: linear-gradient(
+      90deg,
+      $primary-green 80%,
+      $secondary-green 80%
+    );
+    margin: 15px auto 0 auto;
+    &::before {
+      background: linear-gradient(
+        90deg,
+        darken($primary-green, 5%) 80%,
+        darken($secondary-green, 5%) 80%
+      );
+    }
+    &::after {
+      background: linear-gradient(
+        90deg,
+        darken($primary-green, 7%) 80%,
+        darken($secondary-green, 7%) 80%
+      );
+    }
+  }
+
+  .hr-1 {
+    background-color: $primary-green;
+  }
+
+  .section-divider {
+    background-color: $primary-green;
+  }
+}

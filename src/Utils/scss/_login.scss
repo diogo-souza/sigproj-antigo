@@ -1,0 +1,32 @@
+.CadastroForm,
+.LoginPasswordReset,
+.LogInForm,
+.LoginPasswordLost {
+  // background: url('../assets/texture.png') no-repeat center;
+  // background-size: cover;
+
+  @include button;
+  .button {
+    padding: 8px 50px 8px 10px;
+    width: 190px;
+    margin: 15px auto;
+    font-size: 1rem !important;
+    text-align: center !important;
+
+    p {
+      font-size: 110%;
+      align-content: center;
+      margin: auto auto auto auto;
+      padding: 0;
+    }
+  }
+}
+.Esqueceusenha {
+  color: #dc3545;
+  font-size: 80%;
+  padding-left: 10px;
+}
+
+@include forms;
+// @include button;
+@include titulos-boxes;

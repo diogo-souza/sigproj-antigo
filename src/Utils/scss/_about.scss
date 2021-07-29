@@ -1,0 +1,90 @@
+.texto-principal {
+  margin-left: 2.5%;
+}
+.conteudo-col {
+  height: 608px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  h1 {
+    padding-top: 20px;
+    color: $primary-red;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-lg;
+  }
+  h2 {
+    padding-top: 15px;
+    color: black;
+    font-weight: $font-weight-semi;
+    line-height: $line-height;
+  }
+  .textos {
+    margin-left: 20px;
+  }
+
+  hr {
+    color: $primary-red;
+    border-top: 2px solid;
+  }
+  .hr-subtitle {
+    margin-left: 20px;
+    width: fit-content;
+    border-bottom: solid;
+    border-color: $primary-green;
+    border-radius: 3px;
+  }
+  p {
+    margin-left: 20px;
+  }
+  .indice {
+    height: 95%;
+    padding-left: 20px;
+    border-left: solid 5px;
+    border-left-color: $primary-red;
+
+    h3 {
+      color: $primary-red;
+      font-weight: $font-weight-bold;
+    }
+
+    .sumario,
+    li {
+      flex-direction: column;
+      padding: 0;
+      ul {
+        padding: 0;
+      }
+    }
+
+    h3 {
+      padding-top: 20px;
+    }
+    .hr-indice {
+      color: $secondary-green;
+      border-top: 0.5px solid;
+      margin: 0.8px;
+      width: 72%;
+    }
+  }
+}
+
+.button-up {
+  display: flex;
+  justify-content: flex-end;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $primary-green;
+  border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: $secondary-green;
+}
