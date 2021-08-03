@@ -107,7 +107,7 @@ const Routes = () => (
                   component={ConsultaEdital}
                 />
                 <Route path="/propostas/:url" component={ConsultaResultado} />
-                <Route path="/:url" component={ConsultaResultadoEdital} />
+                <Route path="/lista-editais/:url" component={ConsultaResultadoEdital} />
                 <Route component={PageNotFound} />
               </Switch>
             </div>

@@ -21,7 +21,7 @@ export const UserStorage = ({ children }) => {
     texto: '',
     userText: '',
   });
-  
+
 
   const [dadosConsulta, setDadosConsulta] = useState({
     area_tematica: null,
@@ -95,7 +95,7 @@ export const UserStorage = ({ children }) => {
   }
 
   async function userLoginGoogle(token) {
-    try {      
+    try {
       login(token);
       await getUser();
       history.push('/dashboard');
@@ -115,7 +115,7 @@ export const UserStorage = ({ children }) => {
       setModalShow(true);
     }
     setLoading(false);
-  }  
+  }
 
   async function userLogout() {
     if (userSession && isAuthenticated()) {
@@ -284,7 +284,8 @@ export const UserStorage = ({ children }) => {
         titulo: '=)',
         userText: 'Seus dados foram atualizados com sucesso.',
       });
-      history.push(`${response.request.responseURL.slice(process.env.REACT_APP_API_URL.length)}`);
+      console.log(response.request.responseURL)
+      history.push(`/lista-editais/${response.request.responseURL.slice(process.env.REACT_APP_API_URL.length)}`);
     } catch (error) {
       setErrorsHTTP({
         ...errorsHTTP,
