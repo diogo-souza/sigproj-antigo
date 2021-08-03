@@ -8,7 +8,7 @@ import { getToken } from '../auth';
 // http://localhost:3000
 
 const api = axios.create({
-  baseURL: 'https://api-sistemaderegistro.herokuapp.com/',
+  baseURL: process.env.REACT_APP_API_URL,
 });
 
 api.interceptors.request.use(async (config) => {

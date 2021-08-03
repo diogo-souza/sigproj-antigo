@@ -87,7 +87,7 @@ const Routes = () => (
                 <Route exact path="/fale-conosco" component={Contato} />
                 <Route exact path="/sobre" component={About} />
                 <Route exact path="/login" component={LoginForm} />
-		            <Route path="/oauth2/redirect" component={OAuth2RedirectHandler} />  
+		            <Route path="/oauth2/redirect" component={OAuth2RedirectHandler} />
                 <Route
                   exact
                   path="/login/recovery-password"
@@ -108,9 +108,7 @@ const Routes = () => (
                 />
                 <Route path="/propostas/:url" component={ConsultaResultado} />
                 <Route path="/:url" component={ConsultaResultadoEdital} />
-                <Route path="/*" component={PageNotFound}>
-                  {/* <Redirect to={{ pathname: '/' }} /> */}
-                </Route>
+                <Route component={PageNotFound} />
               </Switch>
             </div>
             <Footer />

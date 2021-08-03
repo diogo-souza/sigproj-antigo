@@ -37,9 +37,9 @@ const LoginForm = () => {
               >
                 <Form.Row>
                   <div className="social-login">
-                    <a className="btn btn-block social-btn google" href="http://localhost:8080/oauth2/authorize/google?redirect_uri=http://localhost:3000/oauth2/redirect">
-                    <img src={googleLogo} alt="Google" /> Logar com Google</a>     
-                  </div>             
+                    <a className="btn btn-block social-btn google" href={`${process.env.REACT_APP_API_URL}oauth2/authorize/google?redirect_uri=${process.env.REACT_APP_API_URL}oauth2/redirect`}>
+                    <img src={googleLogo} alt="Google" /> Logar com Google</a>
+                  </div>
                 </Form.Row>
                 <Form.Row>
                   <FormGroup as={Col} controlId="email">
@@ -86,7 +86,7 @@ const LoginForm = () => {
                       <p>Esqueceu sua senha?</p>
                     </a>
                   </div>
-                </Form.Row>				        
+                </Form.Row>
                 <Form.Row>
                   <Button
                     type="button"
