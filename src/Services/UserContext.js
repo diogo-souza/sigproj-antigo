@@ -212,10 +212,10 @@ export const UserStorage = ({ children }) => {
     setLoading(false);
     setModalShow(true);
   }
-  async function putAccountPassword(novaSenha, confirmarSenha) {
-    // console.log({novaSenha, confirmarSenha} )
+  async function putAccountPassword(senha, novaSenha, confirmarSenha) {
     try {
       const response = await api.put('usuarios/editar-perfil/atualizar-senha', {
+        senha,
         novaSenha,
         confirmarSenha,
       });

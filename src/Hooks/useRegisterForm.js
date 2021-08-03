@@ -126,7 +126,7 @@ const useRegisterForm = () => {
     } else {
       event.preventDefault();
       setValidated(true);
-      putAccountPassword(values.confirmarSenha, values.novaSenha);
+      putAccountPassword(values.senha , values.novaSenha, values.confirmarSenha);
     }
   };
 
