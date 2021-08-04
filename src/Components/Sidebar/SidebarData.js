@@ -60,9 +60,9 @@ export const SidebarData = [
     roles: ['public'],
   },
   {
-    title: 'Fale Conosco',
+    title: 'Contato',
     icon: <PhoneInTalkRoundedIcon />,
-    path: '/fale-conosco',
+    path: '/contato',
     roles: ['public'],
   },
   {

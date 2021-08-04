@@ -84,7 +84,7 @@ const Routes = () => (
                 <Route path="/editais/:url" component={ResumoEdital} />
                 <PrivateRoute exact path="/perfil" component={Account} />
                 <Route exact path="/" component={Home} />
-                <Route exact path="/fale-conosco" component={Contato} />
+                <Route exact path="/contato" component={Contato} />
                 <Route exact path="/sobre" component={About} />
                 <Route exact path="/login" component={LoginForm} />
 		            <Route path="/oauth2/redirect" component={OAuth2RedirectHandler} />

@@ -8,7 +8,7 @@ import { FormControl, FormGroup, FormLabel } from 'react-bootstrap';
 const Contato = () => (
   <div className="contato">
     <Container>
-      <h1>Fale Conosco</h1>
+      <h1>Contato</h1>
       <hr className="hr-1" />
       <div className="form">
         <Form>

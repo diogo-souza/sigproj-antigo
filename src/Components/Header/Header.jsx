@@ -135,7 +135,7 @@ const Header = () => {
                 <Link to="/consulta">Consulta</Link>
               </Nav.Item>
               <Nav.Item as="li">
-                <Link to="/fale-conosco">Fale Conosco</Link>
+                <Link to="/contato">Contato</Link>
               </Nav.Item> */}
               <Nav.Item as="li">
                 <Nav.Link href="/">Início</Nav.Link>
@@ -147,7 +147,7 @@ const Header = () => {
                 <Nav.Link href="/consulta">Consulta</Nav.Link>
               </Nav.Item>
               <Nav.Item as="li" href="/">
-                <Nav.Link href="/fale-conosco">Fale Conosco</Nav.Link>
+                <Nav.Link href="/contato">Contato</Nav.Link>
               </Nav.Item>
             </Nav>
           </Navbar.Collapse>
