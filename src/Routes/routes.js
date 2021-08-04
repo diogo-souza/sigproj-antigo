@@ -1,10 +1,7 @@
 import React from 'react';
 import {
   BrowserRouter,
-  Route,
   Switch,
-  Redirect,
-  useLocation,
 } from 'react-router-dom';
 
 import Backdrop from '../Components/Backdrop/Backdrop';
@@ -28,26 +25,14 @@ import LoginForm from '../Pages/Login/LoginForm';
 import LoginPasswordLost from '../Pages/Login/LoginPasswordLost';
 import LoginPasswordReset from '../Pages/Login/LoginPasswordReset';
 import Dashboard from '../Pages/Dashboard/Dashboard';
-import { isAuthenticated } from '../Services/auth';
 import CadastroProposta from '../Pages/CadastroProposta/CadastroProposta';
 import CadastroEdital from '../Pages/CadastroEdital/CadastroEdital';
 import VisualizarEdital from '../Components/VisualizarEdital';
 import Sidebar from '../Components/Sidebar/Sidebar';
 import MyVerticallyCenteredModal from '../Components/Modal/Modal';
 import OAuth2RedirectHandler from '../Pages/Oauth2/OAuth2RedirectHandler';
+import Route from './Route';
 
-const PrivateRoute = ({ component: Component, ...rest }) => (
-  <Route
-    {...rest}
-    render={(props) =>
-      isAuthenticated() ? (
-        <Component {...props} />
-      ) : (
-        <Redirect to={{ pathname: '/', state: { from: props.location } }} />
-      )
-    }
-  />
-);
 
 const Routes = () => (
   <BrowserRouter>
@@ -61,18 +46,21 @@ const Routes = () => (
               <Backdrop />
               <MyVerticallyCenteredModal />
               <Switch>
-                <PrivateRoute exact path="/dashboard" component={Dashboard} />
-                <PrivateRoute
+                <Route isPrivate exact path="/dashboard" component={Dashboard} />
+                <Route
+                  isPrivate
                   exact
                   path="/cadastro-proposta/:uuid?"
                   component={CadastroProposta}
                 />
-                <PrivateRoute
+                <Route
+                  isPrivate
                   exact
                   path="/cadastro-edital"
                   component={CadastroEdital}
                 />
-                <PrivateRoute
+                <Route
+                  isPrivate
                   exact
                   path="/visualizar-edital/:id"
                   component={VisualizarEdital}
@@ -82,12 +70,12 @@ const Routes = () => (
                   component={ResumoProposta}
                 />
                 <Route path="/editais/:url" component={ResumoEdital} />
-                <PrivateRoute exact path="/perfil" component={Account} />
+                <Route isPrivate exact path="/perfil" component={Account} />
                 <Route exact path="/" component={Home} />
                 <Route exact path="/contato" component={Contato} />
                 <Route exact path="/sobre" component={About} />
                 <Route exact path="/login" component={LoginForm} />
-		            <Route path="/oauth2/redirect" component={OAuth2RedirectHandler} />
+                <Route path="/oauth2/redirect" component={OAuth2RedirectHandler} />
                 <Route
                   exact
                   path="/login/recovery-password"
