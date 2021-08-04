@@ -51,7 +51,7 @@ const Register = () => {
             >
               <Form.Row>
                 <FormGroup as={Col} controlId="nome">
-                  <FormLabel>Nome Completo</FormLabel>
+                  <FormLabel>Nome Completo<p>*</p></FormLabel>
                   <FormControl
                     required
                     type="text"
@@ -69,7 +69,7 @@ const Register = () => {
               </Form.Row>
               <Form.Row>
                 <FormGroup as={Col} controlId="email">
-                  <FormLabel>E-mail</FormLabel>
+                  <FormLabel>E-mail<p>*</p></FormLabel>
                   <FormControl
                     required
                     type="text"
@@ -89,7 +89,7 @@ const Register = () => {
               </Form.Row>
               <Form.Row>
                 <FormGroup as={Col} md="6" controlId="senha">
-                  <FormLabel>Senha</FormLabel>
+                  <FormLabel>Senha<p>*</p></FormLabel>
                   <FormControl
                     required
                     type="password"
@@ -104,7 +104,7 @@ const Register = () => {
                   </Form.Control.Feedback>
                 </FormGroup>
                 <FormGroup as={Col} md="6" controlId="confirmarSenha">
-                  <FormLabel>Confirmaçäo de Senha</FormLabel>
+                  <FormLabel>Confirmaçäo de Senha<p>*</p></FormLabel>
                   <FormControl
                     required
                     type="password"
@@ -123,7 +123,7 @@ const Register = () => {
               <hr />
               <Form.Row>
                 <FormGroup as={Col} md="6" controlId="cpf">
-                  <FormLabel>CPF</FormLabel>
+                  <FormLabel>CPF<p>*</p></FormLabel>
                   <FormControl
                     required
                     type="text"
@@ -138,7 +138,7 @@ const Register = () => {
                   </Form.Control.Feedback>
                 </FormGroup>
                 <FormGroup as={Col} md="6" controlId="data_nascimento">
-                  <FormLabel>Data de Nascimento</FormLabel>
+                  <FormLabel>Data de Nascimento<p>*</p></FormLabel>
                   <FormControl
                     required
                     type="date"
@@ -189,7 +189,7 @@ const Register = () => {
               <hr />
               <Form.Row>
                 <FormGroup as={Col} md="6" controlId="cep">
-                  <FormLabel>CEP</FormLabel>
+                  <FormLabel>CEP<p>*</p></FormLabel>
                   <FormControl
                     required
                     type="text"
@@ -205,7 +205,7 @@ const Register = () => {
                   </Form.Control.Feedback>
                 </FormGroup>
                 <FormGroup as={Col} md="6" controlId="estado">
-                  <FormLabel>Estado</FormLabel>
+                  <FormLabel>Estado<p>*</p></FormLabel>
                   <FormControl
                     required
                     as="select"
@@ -222,7 +222,7 @@ const Register = () => {
               </Form.Row>
               <Form.Row>
                 <FormGroup as={Col} md="6" controlId="cidade">
-                  <FormLabel>Cidade</FormLabel>
+                  <FormLabel>Cidade<p>*</p></FormLabel>
                   <FormControl
                     required
                     as="select"
@@ -237,7 +237,7 @@ const Register = () => {
                   </FormControl>
                 </FormGroup>
                 <FormGroup as={Col} md="6" controlId="bairro">
-                  <FormLabel>Bairro</FormLabel>
+                  <FormLabel>Bairro<p>*</p></FormLabel>
                   <FormControl
                     required
                     type="text"
@@ -251,7 +251,7 @@ const Register = () => {
               </Form.Row>
               <Form.Row>
                 <FormGroup as={Col} md="6" controlId="logradouro">
-                  <FormLabel>Logradouro</FormLabel>
+                  <FormLabel>Logradouro<p>*</p></FormLabel>
                   <FormControl
                     required
                     type="text"
@@ -264,7 +264,7 @@ const Register = () => {
                   </Form.Control.Feedback>
                 </FormGroup>
                 <FormGroup as={Col} md="6" controlId="numero_residencial">
-                  <FormLabel>Número</FormLabel>
+                  <FormLabel>Número<p>*</p></FormLabel>
                   <FormControl
                     required
                     type="number"
@@ -300,7 +300,7 @@ const Register = () => {
               </Form.Row>
               <Form.Row>
                 <FormGroup as={Col} md="6" controlId="celular">
-                  <FormLabel>Celular</FormLabel>
+                  <FormLabel>Celular<p>*</p></FormLabel>
                   <FormControl
                     required
                     type="text"
@@ -317,7 +317,7 @@ const Register = () => {
               <hr />
               <Form.Row>
                 <FormGroup as={Col} controlId="universidade">
-                  <FormLabel>Instituição</FormLabel>
+                  <FormLabel>Instituição<p>*</p></FormLabel>
                   <FormControl
                     required
                     as="select"
@@ -331,7 +331,7 @@ const Register = () => {
               </Form.Row>
               <Form.Row>
                 <FormGroup as={Col} md="6" controlId="centro">
-                  <FormLabel>Centro</FormLabel>
+                  <FormLabel>Centro<p>*</p></FormLabel>
                   <FormControl
                     required
                     as="select"
@@ -357,7 +357,7 @@ const Register = () => {
                   </FormControl>
                 </FormGroup>
                 <FormGroup as={Col} md="6" controlId="departamento">
-                  <FormLabel>Departamento</FormLabel>
+                  <FormLabel>Departamento<p>*</p></FormLabel>
                   <FormControl
                     required
                     as="select"
@@ -377,7 +377,7 @@ const Register = () => {
               </Form.Row>
               <Form.Row>
                 <FormGroup as={Col} md="6" controlId="categoria">
-                  <FormLabel>Categoria</FormLabel>
+                  <FormLabel>Categoria<p>*</p></FormLabel>
                   <FormControl
                     required
                     as="select"
@@ -389,7 +389,7 @@ const Register = () => {
                   </FormControl>
                 </FormGroup>
                 <FormGroup as={Col} md="6" controlId="carga_trabalho">
-                  <FormLabel>Regime de Trabalho</FormLabel>
+                  <FormLabel>Regime de Trabalho<p>*</p></FormLabel>
                   <FormControl
                     required
                     as="select"
@@ -408,7 +408,7 @@ const Register = () => {
               </Form.Row>
               <Form.Row>
                 <FormGroup as={Col} md="6" controlId="titulacao">
-                  <FormLabel>Titulação</FormLabel>
+                  <FormLabel>Titulação<p>*</p></FormLabel>
                   <FormControl
                     required
                     as="select"

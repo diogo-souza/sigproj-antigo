@@ -130,6 +130,12 @@ export const UserStorage = ({ children }) => {
   async function userSignIn(values) {
     try {
       const response = await api.post('/usuarios', values);
+      setErrorsHTTP({
+        ...errorsHTTP,
+        titulo: '=)',
+        userText: 'Seu cadastro foi realizado com sucesso.',
+      });
+      history.push("/login");
     } catch (error) {
       setErrorsHTTP({
         ...errorsHTTP,
@@ -139,6 +145,7 @@ export const UserStorage = ({ children }) => {
       setModalShow(true);
     }
     setLoading(false);
+    setModalShow(true);
   }
 
   async function userRecoveryPassword(email) {
