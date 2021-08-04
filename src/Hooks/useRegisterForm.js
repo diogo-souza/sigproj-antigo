@@ -38,7 +38,11 @@ const useRegisterForm = () => {
     },
   });
   const { errors, setErrors } = formsValidations2();
-  const { userSignIn, userSession, putAccount,putAccountPassword } = useContext(UserContext);
+  const { userSignIn, userSession, putAccount, putAccountPassword } = useContext(UserContext);
+
+  useEffect(() => {
+    console.log(values)
+  }, [values])
 
 
 
@@ -97,7 +101,7 @@ const useRegisterForm = () => {
     }
   };
 
-  const handleSubmitAccount = (event) => {
+  const handleSubmitAccountPersonalData = (event) => {
     const form = event.currentTarget;
     const noError = !Object.values(errors).some(
       (error) => error !== null && error !== '',
@@ -109,10 +113,16 @@ const useRegisterForm = () => {
     } else {
       event.preventDefault();
       setValidated(true);
-      putAccount(values);
+      const updatedUser = {
+        nome: values.nome,
+        telefone: values.telefone,
+        cpf: values.cpf,
+        data_nascimento: values.data_nascimento,
+        sexo: values.sexo
+      }
+      putAccount(updatedUser);
     }
   };
-
 
   const handleSubmitAccountPassword = (event) => {
     const form = event.currentTarget;
@@ -126,9 +136,50 @@ const useRegisterForm = () => {
     } else {
       event.preventDefault();
       setValidated(true);
-      putAccountPassword(values.senha , values.novaSenha, values.confirmarSenha);
+      putAccountPassword(values.senha, values.novaSenha, values.confirmarSenha);
     }
   };
+
+  const handleSubmitAccountAddress = (event) => {
+    const form = event.currentTarget;
+    const noError = !Object.values(errors).some(
+      (error) => error !== null && error !== '',
+    );
+
+    if (form.checkValidity() === false || !noError) {
+      event.preventDefault();
+      event.stopPropagation();
+    } else {
+      event.preventDefault();
+      setValidated(true);
+      putAccount(values.endereco);
+    }
+  };
+
+  const handleSubmitOthers = (event) => {
+    const form = event.currentTarget;
+    const noError = !Object.values(errors).some(
+      (error) => error !== null && error !== '',
+    );
+
+    if (form.checkValidity() === false || !noError) {
+      event.preventDefault();
+      event.stopPropagation();
+    } else {
+      event.preventDefault();
+      setValidated(true);
+      const updatedUser = {
+        universidade: values.universidade,
+        centro: values.centro,
+        departamento: values.departamento,
+        categoria: values.categoria,
+        carga_trabalho: values.carga_trabalho,
+        titulacao: values.titulacao,
+      }
+      putAccount(updatedUser);
+    }
+  };
+
 
 
   // Validação de CEP
@@ -183,7 +234,9 @@ const useRegisterForm = () => {
     validated,
     cities,
     handleSubmitRegister,
-    handleSubmitAccount,
+    handleSubmitAccountPersonalData,
+    handleSubmitAccountAddress,
+    handleSubmitOthers,
     handleSubmitAccountPassword,
     validateCEP,
   };

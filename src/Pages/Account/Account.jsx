@@ -22,8 +22,10 @@ const Account = () => {
     values,
     setValues,
     validated,
-    handleSubmitAccount,
+    handleSubmitAccountPersonalData,
     handleSubmitAccountPassword,
+    handleSubmitAccountAddress,
+    handleSubmitOthers,
     cities,
     validateCEP,
   } = useRegisterForm();
@@ -58,7 +60,7 @@ const Account = () => {
                 <Col md="auto">
                   <Form
                     className="form-dados-pessoais"
-                    onSubmit={handleSubmitAccount}
+                    onSubmit={handleSubmitAccountPersonalData}
                     noValidate
                     validated={validated}
                   >
@@ -211,7 +213,7 @@ const Account = () => {
                     <hr />
                     <Row className="justify-content-md-center">
                       <Button className="button button-medium" type="submit">
-                        <p>Atualizar</p>
+                        <p>Atualizar dados pessoais</p>
                         <i className="material-icons button-icon">person</i>
                       </Button>
                     </Row>
@@ -278,7 +280,7 @@ const Account = () => {
                     <hr />
                     <Row className="justify-content-md-center">
                       <Button className="button button-medium" type="submit">
-                        <p>Atualizar</p>
+                        <p>Atualizar senha</p>
                         <i className="material-icons button-icon">person</i>
                       </Button>
                     </Row>
@@ -292,7 +294,7 @@ const Account = () => {
                 <Col md="auto">
                   <Form
                     className="form"
-                    onSubmit={handleSubmitAccount}
+                    onSubmit={handleSubmitAccountAddress}
                     noValidate
                     validated={validated}
                   >
@@ -402,7 +404,7 @@ const Account = () => {
                     </Form.Row>
                     <Row className="justify-content-md-center">
                       <Button className="button button-medium" type="submit">
-                        <p>Atualizar</p>
+                        <p>Atualizar endereço</p>
                         <i className="material-icons button-icon">person</i>
                       </Button>
                     </Row>
@@ -415,7 +417,7 @@ const Account = () => {
                 <Col md="auto">
                   <Form
                     className="form"
-                    onSubmit={handleSubmitAccount}
+                    onSubmit={handleSubmitOthers}
                     noValidate
                     validated={validated}
                   >
@@ -537,7 +539,7 @@ const Account = () => {
                     </Form.Row>
                     <Row className="justify-content-md-center">
                       <Button className="button button-medium" type="submit">
-                        <p>Atualizar</p>
+                        <p>Atualizar outros</p>
                         <i className="material-icons button-icon">person</i>
                       </Button>
                     </Row>
