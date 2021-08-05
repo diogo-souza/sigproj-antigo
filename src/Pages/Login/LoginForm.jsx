@@ -37,7 +37,7 @@ const LoginForm = () => {
               >
                 <Form.Row>
                   <div className="social-login">
-                    <a className="btn btn-block social-btn google" href={`${process.env.REACT_APP_API_URL}oauth2/authorize/google?redirect_uri=${process.env.REACT_APP_API_URL}oauth2/redirect`}>
+                    <a className="btn btn-block social-btn google" href={`${process.env.REACT_APP_API_URL}oauth2/authorize/google?redirect_uri=https://sistemaderegistroproexc.herokuapp.com/oauth2/redirect`}>
                     <img src={googleLogo} alt="Google" /> Logar com Google</a>
                   </div>
                 </Form.Row>
