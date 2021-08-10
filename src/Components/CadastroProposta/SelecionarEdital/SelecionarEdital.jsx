@@ -50,7 +50,7 @@ const SelecionarEdital = ({ from, step, setStep }) => {
   let editaisData;
 
   async function getEditais() {
-    editaisData = await api.get('editais', {
+    editaisData = await api.get('editais?ativos=true', {
       params: JSON.parse(
         sessionStorage.getItem('@NovoSistemadeRegistro-FiltroEditais'),
       ),
